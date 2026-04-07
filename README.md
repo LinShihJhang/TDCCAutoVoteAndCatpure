@@ -42,7 +42,12 @@
 2.  **資料轉換**：
     * 前往 [TDCC 清單轉換網站](https://tdcc-voted-stockids.pages.dev/)。
     * 將清單轉換為 **陣列格式 (Array)**。
-3.  **填入腳本**：將轉換好的陣列貼入 `auto_catpure.js` 程式碼中。
+3.  **填入腳本參數**：
+    打開 `auto_catpure.js` 程式碼，將轉換後的陣列貼在「＝」後面，取代 ['1225', '5398'] ：
+    ```javascript
+    // 範例：將轉換後的代號貼在括號內
+    const stockIds = ['1225', '5398']; 
+    ```
 4.  **執行截圖**：
     * 新增 `auto_catpure.js` 腳本至 Tampermonkey。
     * 啟用腳本並**重新整理**電子投票網頁。
