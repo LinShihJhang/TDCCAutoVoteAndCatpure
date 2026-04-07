@@ -1,41 +1,55 @@
-此程式碼基於此教學文章進行修改： https://vocus.cc/article/680e3a7dfd89780001db907a
+# 股東會自動投票與截圖工具指南
 
-1.安裝「篡改猴」並調整設定
+本專案程式碼基於 [Vocus 教學文章](https://vocus.cc/article/680e3a7dfd89780001db907a) 進行修改與整合。
 
-🌟安裝連結
+---
 
-https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW
+## 🛠 1. 安裝與設定 Tampermonkey
 
-🌟調整教學
-擴充套件「篡改猴」設定允許使用者指令碼
+在使用腳本之前，請先安裝擴充套件並調整權限：
 
-https://github.com/doggy8088/TampermonkeyUserscripts/blob/main/README.md
+* **安裝連結**：[Chrome 線上應用程式商店](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW)
+* **調整教學**：[允許使用者指令碼設定步驟](https://github.com/doggy8088/TampermonkeyUserscripts/blob/main/README.md)
+    > 🌟 請確保已開啟「允許存取檔案網址」或相關開發者模式設定。
 
+---
 
-2.新增「自動投票」auto_vote.js 程式碼腳本(參考下面教學網址)
+## 🗳 2. 自動投票流程 (auto_vote.js)
 
-https://vocus.cc/article/680e3a7dfd89780001db907a
+1.  **新增腳本**：在 Tampermonkey 中新增一個腳本，並貼上 `auto_vote.js` 程式碼。
+2.  **參考教學**：詳細原理請參閱 [Vocus 教學文章](https://vocus.cc/article/680e3a7dfd89780001db907a)。
+3.  **操作注意**：
+    * 啟用腳本後進入電子投票網頁。
+    * **投票完成後，請務必手動關閉腳本**，避免干擾後續操作。
 
+---
 
-3.啟用自動投票，投票完關閉腳本
+## 📥 3. 瀏覽器自動下載設定
 
-4.允許網站自動下載
-🌟在 Chrome 瀏覽器中，若要允許網站自動下載多個檔案，點擊右上角「...」（更多）圖示，選擇
-「設定」>「隱私權和安全性」>「網站設定」>「其他權限」>「自動下載」>，選擇「網站可以要求自動下載多個檔案」。若遇封鎖，可點擊網址列右側的提示圖示，選擇允許下載即可。 
+為避免下載截圖時被瀏覽器攔截，請依照下列步驟設定：
 
-🌟「可以自動下載多個檔案」部分，點選「新增」，輸入「https://stockservices.tdcc.com.tw:443」
+1.  開啟 Chrome **「設定」** > **「隱私權和安全性」** > **「網站設定」**。
+2.  點擊 **「其他權限」** > **「自動下載」**。
+3.  勾選 **「網站可以要求自動下載多個檔案」**。
+4.  **新增白名單**：在「允許自動下載」清單中點擊「新增」，輸入以下網址：
+    `https://stockservices.tdcc.com.tw:443`
 
-5.在電子投票的網頁，下載持有股東會清單，並透過下面網站轉換成陣列，然後貼到「自動截圖」程式碼裡面
+---
 
-https://tdcc-voted-stockids.pages.dev/
+## 📸 4. 自動截圖流程 (auto_catpure.js)
 
-(參考下面教學網址)
+1.  **取得股東清單**：在電子投票網頁下載您的「持有股東會清單」。
+2.  **資料轉換**：
+    * 前往 [TDCC 清單轉換網站](https://tdcc-voted-stockids.pages.dev/)。
+    * 將清單轉換為 **陣列格式 (Array)**。
+3.  **填入腳本**：將轉換好的陣列貼入 `auto_catpure.js` 程式碼中。
+4.  **執行截圖**：
+    * 新增 `auto_catpure.js` 腳本至 Tampermonkey。
+    * 啟用腳本並**重新整理**電子投票網頁。
+5.  **結束**：截圖完成後，關閉視窗並停用腳本。
 
-https://vocus.cc/article/680e3a7dfd89780001db907a
+---
 
-6.新增「自動截圖」auto_catpure.js 程式碼腳本(參考下面教學網址)
-
-https://vocus.cc/article/680e3a7dfd89780001db907a
-
-7.啟用自動截圖，重新整理，截圖完關掉視窗
-
+## 🔗 相關連結
+* [教學來源 - Vocus](https://vocus.cc/article/680e3a7dfd89780001db907a)
+* [格式轉換工具](https://tdcc-voted-stockids.pages.dev/)
