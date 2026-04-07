@@ -1,4 +1,4 @@
-此程式碼基於 「https://vocus.cc/article/680e3a7dfd89780001db907a」文章進行修改
+此程式碼基於此教學文章進行修改： https://vocus.cc/article/680e3a7dfd89780001db907a
 
 1.安裝「篡改猴」並調整設定
 
