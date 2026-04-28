@@ -9,6 +9,8 @@
 // @run-at       document-end
 // ==/UserScript==
 
+// source blog url: https://vocus.cc/article/680e3a7dfd89780001db907a
+
 (function() {
     'use strict';
 
