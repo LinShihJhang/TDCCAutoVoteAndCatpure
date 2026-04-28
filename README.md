@@ -10,7 +10,7 @@
 
 * **安裝連結**：[Chrome 線上應用程式商店](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW)
 * **調整教學**：[允許使用者指令碼設定步驟](https://github.com/doggy8088/TampermonkeyUserscripts/blob/main/README.md)
-    > 🌟 請確保已開啟「允許存取檔案網址」或相關開發者模式設定。
+    > 🌟 請確保已開啟「允許使用者指令碼」或相關開發者模式設定。
 
 ---
 
