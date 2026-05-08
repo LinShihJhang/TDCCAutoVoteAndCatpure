@@ -9,8 +9,9 @@
 在使用腳本之前，請先安裝擴充套件並調整權限：
 
 * **安裝連結**：[Chrome 線上應用程式商店](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW)
-* **調整教學**：[允許使用者指令碼設定步驟](https://github.com/doggy8088/TampermonkeyUserscripts/blob/main/README.md)
+* **調整教學**(到第3步驟)：[允許使用者指令碼設定步驟](https://github.com/doggy8088/TampermonkeyUserscripts/blob/main/README.md)
     > 🌟 請確保已開啟「允許使用者指令碼」或相關開發者模式設定。
+    > 完成到第三步驟「3.要到篡改猴的擴充功能管理頁面啟用「允許使用者指令碼」選項」
 
 ---
 
